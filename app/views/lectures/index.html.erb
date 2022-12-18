@@ -1,0 +1,39 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Lectures</h1>
+
+<!-- This is table for list of all lectures. -->
+<table class="table table-striped table-bordered table-hover">
+  
+  <thead class="thead-dark">
+    <tr>
+      <th>#</th>
+      <th>Lecture Title</th>
+      <th>Lecture Code</th>
+      <th>Lecturers</th>
+      <th>Credit</th>
+      <th>Language</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lectures.each do |lecture| %>
+      <tr>
+        <td><%= lecture.id %></td>
+        <td><%= lecture.title %></td>
+        <td><%= lecture.lecture_id %></td>
+        <td><%= lecture.lecturers %></td>
+        <td><%= lecture.credit %></td>
+        <td><%= lecture.language %></td>
+        <td><%= link_to "Show", lecture %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+
+
+
+<%= link_to "Add New Lecture", new_lecture_path %>
