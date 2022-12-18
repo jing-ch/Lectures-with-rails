@@ -36,8 +36,20 @@
     <!-- These are the links for user account sign in, sign out, ect. They are put on the right side of the navbar. -->
     <ul class="navbar-nav my-2">
    		<li class="nav-item">
-        	<a class="nav-link" href="#">Link</a>
-      	</li>
+      	<%= link_to "Sign Up", new_user_registration_path, class:"nav-link"%>
+    	</li>
+
+      <li class="nav-item">
+        <%= link_to "Sign In", new_user_session_path, class:"nav-link"%>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link"%>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to "Edit Profile", edit_user_registration_path, class:"nav-link"%>
+      </li>
 	</ul>
 
   </div>
