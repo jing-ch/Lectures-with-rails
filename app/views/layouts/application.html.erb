@@ -26,6 +26,12 @@
     <%= render 'home/header' %>
 
     <div class="container">
+
+      <!-- This is where alerts parial goes. -->
+      <% if notice %>
+        <%= render 'layouts/alerts' %>
+      <% end %>
+      
       <br>
       <%= yield %>
     </div>

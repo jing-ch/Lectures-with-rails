@@ -11,47 +11,48 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+  <div class="form-group">
+    <% form.label :title, style: "display: block" %>
+    <%= form.text_field :title, class:"form-control", placeholder:"Lecture Title (e.g. Ruby on Rails Business Programming)" %>
+  </div>
+
+  <div class="form-group">
+    <% form.label :lecture_id, style: "display: block" %>
+    <%= form.text_field :lecture_id, class:"form-control", placeholder:"Lecture Code (e.g. 188.519)" %>
+  </div>
+
+  <div class="form-group">
+    <% form.label :lecturers, style: "display: block" %>
+    <%= form.text_field :lecturers, class:"form-control", placeholder:"Lecturer (e.g. Eidenberger Horst)" %>
+  </div>
+
+  <div class="form-group">
+    <% form.label :credit, style: "display: block" %>
+    <%= form.number_field :credit, class:"form-control", placeholder:"Credit (e.g. 3.0)" %>
+  </div>
+
+  <div class="form-group">
+    <% form.label :language, style: "display: block" %>
+    <%= form.text_field :language, class:"form-control", placeholder:"Language (e.g. English)" %>
+  </div>
+
+  <div class="form-group">
+    <% form.label :time_day, style: "display: block" %>
+    <%= form.text_field :time_day, class:"form-control", placeholder:"Day in a Week (e.g. Wed)" %>
+  </div>
+
+  <div class="form-group">
+    <% form.label :time_hour_start, style: "display: block" %>
+    <%= form.number_field :time_hour_start, class:"form-control", placeholder:"Starting Hour (e.g. 14)" %>
+  </div>
+
+  <div class="form-group">
+    <% form.label :time_hour_end, style: "display: block" %>
+    <%= form.number_field :time_hour_end, class:"form-control", placeholder:"Ending Hour (e.g. 16)" %>
   </div>
 
   <div>
-    <%= form.label :lecture_id, style: "display: block" %>
-    <%= form.text_field :lecture_id %>
-  </div>
-
-  <div>
-    <%= form.label :lecturers, style: "display: block" %>
-    <%= form.text_field :lecturers %>
-  </div>
-
-  <div>
-    <%= form.label :credit, style: "display: block" %>
-    <%= form.number_field :credit %>
-  </div>
-
-  <div>
-    <%= form.label :language, style: "display: block" %>
-    <%= form.text_field :language %>
-  </div>
-
-  <div>
-    <%= form.label :time_day, style: "display: block" %>
-    <%= form.text_field :time_day %>
-  </div>
-
-  <div>
-    <%= form.label :time_hour_start, style: "display: block" %>
-    <%= form.number_field :time_hour_start %>
-  </div>
-
-  <div>
-    <%= form.label :time_hour_end, style: "display: block" %>
-    <%= form.number_field :time_hour_end %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <br/>
+    <%= form.submit class:"btn btn-outline-primary" %>
   </div>
 <% end %>
