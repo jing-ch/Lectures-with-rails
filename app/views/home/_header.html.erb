@@ -27,12 +27,20 @@
         <%= link_to "All Lectures", lectures_path, class:"nav-link"%>
       </li>
 
-      <!-- This is the link to the new lectures page. -->
+      <!-- This is the link to the create lectures page. -->
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Add Lecture", new_lecture_path, class:"nav-link"%>
+          <%= link_to "Create Lecture", new_lecture_path, class:"nav-link"%>
         </li>
       <% end %>
+
+      <!-- This is the link to the my lectures page. -->
+      <% if user_signed_in? %>
+        <li class="nav-item active">
+          <%= link_to "My Favorites", favorites_path, class:"nav-link"%>
+        </li>
+      <% end %>
+
     </ul>
 
     <!-- These are the links for user account sign in, sign out, ect. They are put on the right side of the navbar. -->

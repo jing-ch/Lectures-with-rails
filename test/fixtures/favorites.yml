@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  lecture_id: MyString
+  credit: 1
+  time_day: MyString
+  hour_start: 1
+  hour_end: 1
+
+two:
+  title: MyString
+  lecture_id: MyString
+  credit: 1
+  time_day: MyString
+  hour_start: 1
+  hour_end: 1

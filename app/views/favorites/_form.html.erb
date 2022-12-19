@@ -1,0 +1,47 @@
+<%= form_with(model: favorite) do |form| %>
+  <% if favorite.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(favorite.errors.count, "error") %> prohibited this favorite from being saved:</h2>
+
+      <ul>
+        <% favorite.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :lecture_id, style: "display: block" %>
+    <%= form.text_field :lecture_id %>
+  </div>
+
+  <div>
+    <%= form.label :credit, style: "display: block" %>
+    <%= form.number_field :credit %>
+  </div>
+
+  <div>
+    <%= form.label :time_day, style: "display: block" %>
+    <%= form.text_field :time_day %>
+  </div>
+
+  <div>
+    <%= form.label :hour_start, style: "display: block" %>
+    <%= form.number_field :hour_start %>
+  </div>
+
+  <div>
+    <%= form.label :hour_end, style: "display: block" %>
+    <%= form.number_field :hour_end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
